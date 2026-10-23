@@ -1,0 +1,23 @@
+# 우리 가족 여행 기록
+
+한국어 가족 여행 아카이브. 빌드 없이 배포하는 정적 사이트입니다.
+
+## 구성
+- 우리 가족 여행 / 우리가 다녀온 곳 / 여행 이야기 / 여행 사진첩 / 가족 전용 앨범
+- 첫 기록: [2026 호주 가족여행](https://ksangki.github.io/australia-family-2026/)
+- 기존 호주 저장소·배포는 수정하지 않습니다.
+- 가족 전용 앨범은 준비 안내만 제공합니다. 인증·비공개 사진 저장 기능은 없습니다.
+
+## 실행 및 배포
+`python3 -m http.server 8000` 실행 후 브라우저에서 확인하세요.
+GitHub Pages의 배포 원본을 main 브랜치 루트로 설정합니다.
+모든 로컬 참조는 상대 경로이므로 /family-travel/ 하위 배포를 지원합니다.
+
+## 사진과 개인정보
+assets/sydney-harbour.jpg는 기존 호주 사이트의 공개 풍경 사진입니다.
+출처: Kgbo, https://commons.wikimedia.org/wiki/File:Sydney_Harbour_Bridge_and_Sydney_Opera_House_panorama.jpg
+라이선스: https://creativecommons.org/licenses/by-sa/4.0/
+사진 원본은 변경하지 않았으며 화면에서 잘라 표시합니다.
+가족 사진·위치 메타데이터·개인 정보·비공개 앨범 URL은 포함하지 않습니다.
+추가 사진은 공개 동의와 메타데이터 제거를 확인한 사본만 이 저장소에 넣으세요.
+비공개 앨범은 별도 인증이 있는 서비스에 보관해야 합니다. HTML 비밀번호나 숨긴 링크는 접근 통제가 아닙니다.
