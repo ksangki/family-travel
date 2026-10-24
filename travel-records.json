@@ -7,8 +7,8 @@
     "period": "사진 기록 · 2024. 5. 26. — 5. 27.",
     "intro": "정원을 걷고 바다를 바라본 오후, 그리고 다음 날 디즈니랜드로 향한 아침. 남아 있는 두 날의 사진을 이어 홍콩 여행의 한 구간을 다시 펼칩니다.",
     "scope": "현재 사진 30장은 디즈니 리조트 일대의 이틀을 담고 있습니다. 출국·귀국일이나 홍콩 시내 방문을 포함한 전체 여행 일정은 확인되지 않았습니다.",
-    "hero": null,
-    "heroAlt": "",
+    "hero": "assets/selected/hong-kong-2024/scene-01.jpg",
+    "heroAlt": "홍콩 리조트의 정원 산책길",
     "summary": [
       "5월 26일에는 리조트 객실과 정원, 바닷가 산책 장면이 이어집니다.",
       "5월 27일 아침에는 버스 안 사진 뒤로 디즈니랜드 입구와 성 앞 풍경이 나타납니다.",
@@ -106,7 +106,29 @@
       "videos": 0,
       "gpsPhotos": 30,
       "unknownVideos": 0
-    }
+    },
+    "representatives": [
+      {
+        "src": "assets/selected/hong-kong-2024/scene-01.jpg",
+        "caption": "리조트의 초록 산책길",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/scene-02.jpg",
+        "caption": "정원을 함께 걷던 오후",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/scene-03.jpg",
+        "caption": "바다 곁에서 남긴 사진",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/scene-04.jpg",
+        "caption": "디즈니랜드 성을 향해",
+        "date": "2024-05-27"
+      }
+    ]
   },
   {
     "id": "osaka-2025",
@@ -314,7 +336,29 @@
       "videos": 32,
       "gpsPhotos": 355,
       "unknownVideos": 0
-    }
+    },
+    "representatives": [
+      {
+        "src": "assets/selected/osaka-2025/scene-01.jpg",
+        "caption": "USJ 입구에서 시작한 여행",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/scene-02.jpg",
+        "caption": "마리오의 세계에서",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/scene-03.jpg",
+        "caption": "교토 철도박물관의 기차들",
+        "date": "2025-06-05"
+      },
+      {
+        "src": "assets/selected/osaka-2025/scene-04.jpg",
+        "caption": "우메코지 주변을 걸으며",
+        "date": "2025-06-05"
+      }
+    ]
   },
   {
     "id": "australia-2026",
@@ -578,9 +622,9 @@
     "period": "사진 기록 · 2022. 6. 1. — 6. 5.",
     "intro": "공항과 기내에서 시작해 숙소의 휴식, 9.81파크의 레이싱, 바다를 바라본 식사와 수국 정원, 어린이 체험 전시까지. 다섯 날의 사진으로 제주 여행의 장면들을 이어 봅니다.",
     "scope": "압축파일의 사진 359장을 보관했습니다. 345장에는 촬영일이 남아 있고 14장은 촬영일 미확인입니다. GPS 항목이 있어도 좌표값이 유효하지 않아 지리적 이동 경로는 복원하지 않았습니다.",
-    "hero": null,
+    "hero": "assets/selected/jeju-2022/cover.jpg",
     "heroWord": "제주",
-    "heroAlt": "",
+    "heroAlt": "제주의 수국과 초록 정원",
     "mapMode": "sequence",
     "summary": [
       "6월 1일 공항·탑승 장면 뒤로 숙소와 가족 휴식 사진이 이어집니다.",
@@ -732,7 +776,29 @@
       "gpsPhotos": 0,
       "unknownVideos": 0,
       "unknownPhotos": 14
-    }
+    },
+    "representatives": [
+      {
+        "src": "assets/selected/jeju-2022/scene-01.jpg",
+        "caption": "9.81파크의 가족 레이싱",
+        "date": "2022-06-02"
+      },
+      {
+        "src": "assets/selected/jeju-2022/scene-02.jpg",
+        "caption": "바다를 배경으로 남긴 장면",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/scene-03.jpg",
+        "caption": "수국 사이에서 함께",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/scene-04.jpg",
+        "caption": "제주의 들판과 그네",
+        "date": "2022-06-04"
+      }
+    ]
   },
   {
     "id": "tokyo-2023",
@@ -742,9 +808,9 @@
     "period": "사진 기록 · 2023. 10. 27. — 10. 31.",
     "intro": "나리타공항에서 시작해 마이하마 리조트의 숙소와 상점가, 모노레일을 타고 디즈니씨와 디즈니랜드로. 가을 장식과 캐릭터, 두 아이와 함께 남긴 닷새의 장면을 사진 순서로 이어 봅니다.",
     "scope": "중복을 제외한 사진 254장·동영상 36개를 정리했습니다. 사진 254장 모두 촬영일과 유효 GPS가 남아 있습니다. 기록 범위는 10월 27~31일이며 귀국 항공편·도착 시각은 확인되지 않았습니다.",
-    "hero": null,
+    "hero": "assets/selected/tokyo-2023/scene-01.jpg",
     "heroWord": "디즈니",
-    "heroAlt": "",
+    "heroAlt": "도쿄 디즈니씨의 항구 풍경",
     "summary": [
       "10월 27일 나리타공항과 버스 이동 뒤로 도쿄만 베이사이드 숙소권의 사진이 이어집니다.",
       "10월 28일에는 리조트라인·디즈니랜드 호텔 주변·익스피어리 상점가, 29일에는 디즈니씨 방문 장면이 확인됩니다.",
@@ -920,6 +986,28 @@
       "videos": 36,
       "gpsPhotos": 254,
       "unknownVideos": 0
-    }
+    },
+    "representatives": [
+      {
+        "src": "assets/selected/tokyo-2023/scene-01.jpg",
+        "caption": "디즈니씨 항구의 풍경",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/scene-02.jpg",
+        "caption": "디즈니씨에서 함께",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/scene-03.jpg",
+        "caption": "신데렐라 성 앞에서",
+        "date": "2023-10-30"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/scene-04.jpg",
+        "caption": "불이 켜진 파크 입구",
+        "date": "2023-10-30"
+      }
+    ]
   }
 ]
