@@ -26,5 +26,5 @@ mapButtons.forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-map-node]').forEach(node => {
     node.classList.toggle('active', node.dataset.mapNode === button.dataset.mapPoint);
   });
-  document.querySelector('#map-selection').textContent = `${button.textContent} · 지도에서 선택한 대표 장소`;
+  document.querySelector('#map-selection').textContent = `${button.textContent} · ${document.querySelector('.sequence-map') ? '기록에서 선택한 장면' : '지도에서 선택한 대표 장소'}`;
 }));
