@@ -67,8 +67,14 @@ def selected_home_card(match):
  photo=f'<a class="trip-image" href="{trip["id"]}.html"><img src="{trip["hero"]}" alt="{E(trip["heroAlt"])}" loading="lazy"><span class="badge">{trip["period"].split("·")[0].strip()}</span></a>'
  return re.sub(r'<a class="trip-image[^"]*"[^>]*>.*?</a>',lambda m:photo,block,count=1,flags=re.S)
 h=re.sub(r'<article class="trip[^"]*">.*?</article>',selected_home_card,h,flags=re.S)
+cards=list(re.finditer(r'<article class="trip[^"]*">.*?</article>',h,re.S))
+if cards and all(not h[a.end():b.start()].strip() for a,b in zip(cards,cards[1:])):
+ def trip_year(card):
+  trip=next((t for t in trips if f'href="{t["id"]}.html"' in card.group(0)),None)
+  return int(trip['folder'][:4]) if trip else 0
+ h=h[:cards[0].start()]+''.join(m.group(0) for m in sorted(cards,key=trip_year,reverse=True))+h[cards[-1].end():]
 h=h.replace('대표 풍경 사진:','시드니 항구 사진:')
 if '그 외 대표 사진: 우리 가족' not in h:h=h.replace('<p>© 2026 우리 가족 여행 기록</p>','<p>그 외 대표 사진: 우리 가족</p><p>© 2026 우리 가족 여행 기록</p>')
 h=re.sub(r'<link rel="stylesheet" href="travel\.css(?:\?[^"]*)?">','',h)
 h=h.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="travel.css?v=selected-photos-1">');(p/'index.html').write_text(h)
-print('Rendered three complete public travel records and home links')
+print('Rendered',len(trips),'complete public travel records and home links')
