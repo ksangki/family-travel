@@ -67,6 +67,8 @@ def selected_home_card(match):
  photo=f'<a class="trip-image" href="{trip["id"]}.html"><img src="{trip["hero"]}" alt="{E(trip["heroAlt"])}" loading="lazy"><span class="badge">{trip["period"].split("·")[0].strip()}</span></a>'
  return re.sub(r'<a class="trip-image[^"]*"[^>]*>.*?</a>',lambda m:photo,block,count=1,flags=re.S)
 h=re.sub(r'<article class="trip[^"]*">.*?</article>',selected_home_card,h,flags=re.S)
+h=h.replace('대표 풍경 사진:','시드니 항구 사진:')
+if '그 외 대표 사진: 우리 가족' not in h:h=h.replace('<p>© 2026 우리 가족 여행 기록</p>','<p>그 외 대표 사진: 우리 가족</p><p>© 2026 우리 가족 여행 기록</p>')
 h=re.sub(r'<link rel="stylesheet" href="travel\.css(?:\?[^"]*)?">','',h)
 h=h.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="travel.css?v=selected-photos-1">');(p/'index.html').write_text(h)
 print('Rendered three complete public travel records and home links')
