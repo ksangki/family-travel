@@ -26,5 +26,7 @@ mapButtons.forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('[data-map-node]').forEach(node => {
     node.classList.toggle('active', node.dataset.mapNode === button.dataset.mapPoint);
   });
-  document.querySelector('#map-selection').textContent = `${button.textContent} · ${document.querySelector('.sequence-map') ? '기록에서 선택한 장면' : '지도에서 선택한 대표 장소'}`;
+  const googleMap = document.querySelector('#google-route-map');
+  if (googleMap && button.dataset.mapSrc) googleMap.src = button.dataset.mapSrc;
+  document.querySelector('#map-selection').textContent = `${button.textContent} · ${document.querySelector('#google-route-map') ? 'Google 지도' : '기록에서 선택한 장면'}`;
 }));

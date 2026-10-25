@@ -7,8 +7,8 @@
     "period": "사진 기록 · 2024. 5. 26. — 5. 27.",
     "intro": "정원을 걷고 바다를 바라본 오후, 그리고 다음 날 디즈니랜드로 향한 아침. 남아 있는 두 날의 사진을 이어 홍콩 여행의 한 구간을 다시 펼칩니다.",
     "scope": "현재 사진 30장은 디즈니 리조트 일대의 이틀을 담고 있습니다. 출국·귀국일이나 홍콩 시내 방문을 포함한 전체 여행 일정은 확인되지 않았습니다.",
-    "hero": "assets/selected/hong-kong-2024/scene-01.jpg",
-    "heroAlt": "홍콩 리조트의 정원 산책길",
+    "hero": "assets/selected/hong-kong-2024/curated-01.jpg",
+    "heroAlt": "디즈니 성 앞에서",
     "summary": [
       "5월 26일에는 리조트 객실과 정원, 바닷가 산책 장면이 이어집니다.",
       "5월 27일 아침에는 버스 안 사진 뒤로 디즈니랜드 입구와 성 앞 풍경이 나타납니다.",
@@ -109,25 +109,77 @@
     },
     "representatives": [
       {
-        "src": "assets/selected/hong-kong-2024/scene-01.jpg",
-        "caption": "리조트의 초록 산책길",
+        "src": "assets/selected/hong-kong-2024/curated-01.jpg",
+        "caption": "디즈니 성 앞에서",
+        "date": "2024-05-27"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-02.jpg",
+        "caption": "리조트 실내 정원",
         "date": "2024-05-26"
       },
       {
-        "src": "assets/selected/hong-kong-2024/scene-02.jpg",
-        "caption": "정원을 함께 걷던 오후",
+        "src": "assets/selected/hong-kong-2024/curated-03.jpg",
+        "caption": "초록 정원 산책",
         "date": "2024-05-26"
       },
       {
-        "src": "assets/selected/hong-kong-2024/scene-03.jpg",
-        "caption": "바다 곁에서 남긴 사진",
+        "src": "assets/selected/hong-kong-2024/curated-04.jpg",
+        "caption": "함께 걷는 정원길",
         "date": "2024-05-26"
       },
       {
-        "src": "assets/selected/hong-kong-2024/scene-04.jpg",
-        "caption": "디즈니랜드 성을 향해",
+        "src": "assets/selected/hong-kong-2024/curated-05.jpg",
+        "caption": "야자수 사이 산책길",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-06.jpg",
+        "caption": "정원에서 보낸 오후",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-07.jpg",
+        "caption": "리조트 정원의 가족",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-08.jpg",
+        "caption": "바다 곁 산책로",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-09.jpg",
+        "caption": "해안에서 함께",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-10.jpg",
+        "caption": "바다를 배경으로 가족 사진",
+        "date": "2024-05-26"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-11.jpg",
+        "caption": "디즈니랜드로 가는 버스",
+        "date": "2024-05-27"
+      },
+      {
+        "src": "assets/selected/hong-kong-2024/curated-12.jpg",
+        "caption": "디즈니랜드 입구",
         "date": "2024-05-27"
       }
+    ],
+    "googlePlaces": [
+      [
+        "홍콩 디즈니 리조트 해안 산책로",
+        22.306,
+        114.038
+      ],
+      [
+        "홍콩 디즈니랜드",
+        22.313,
+        114.043
+      ]
     ]
   },
   {
@@ -138,8 +190,8 @@
     "period": "일본 사진 기록 · 2025. 6. 1. — 6. 6.",
     "intro": "간사이공항에서 시작해 유니버설시티와 USJ를 거쳐 교토로. 마리오의 세계와 기차가 가득한 박물관, 일상의 식사 장면까지 사진의 순서로 이어 본 가족 여행입니다.",
     "scope": "사진에는 6월 1~6일 일본 방문과 6월 7일 귀국 후 국내 기록이 함께 들어 있습니다. 6월 7일 사진 5장은 일본 여행 동선에서 분리했습니다. 정확한 귀국 항공 시각·입국 시각은 확인하지 않았습니다.",
-    "hero": "assets/osaka-2025/sunset.jpg",
-    "heroAlt": "오사카 공원 너머로 지는 해",
+    "hero": "assets/selected/osaka-2025/curated-01.jpg",
+    "heroAlt": "유니버설 스튜디오의 지구본",
     "summary": [
       "6월 1~3일은 오사카 유니버설시티 일대, 6월 2일은 USJ 내부 사진이 집중됩니다.",
       "6월 4일 교토로 사진 위치가 바뀌고, 6월 5일 철도박물관과 우메코지공원 주변 방문이 확인됩니다.",
@@ -339,25 +391,112 @@
     },
     "representatives": [
       {
-        "src": "assets/selected/osaka-2025/scene-01.jpg",
-        "caption": "USJ 입구에서 시작한 여행",
+        "src": "assets/selected/osaka-2025/curated-01.jpg",
+        "caption": "유니버설 스튜디오의 지구본",
         "date": "2025-06-01"
       },
       {
-        "src": "assets/selected/osaka-2025/scene-02.jpg",
-        "caption": "마리오의 세계에서",
+        "src": "assets/selected/osaka-2025/curated-02.jpg",
+        "caption": "유니버설시티에서",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-03.jpg",
+        "caption": "파크 입구에서",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-04.jpg",
+        "caption": "불빛이 켜진 파크 입구",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-05.jpg",
+        "caption": "유니버설의 밤",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-06.jpg",
+        "caption": "저녁의 파크 풍경",
+        "date": "2025-06-01"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-07.jpg",
+        "caption": "USJ 거리 산책",
         "date": "2025-06-02"
       },
       {
-        "src": "assets/selected/osaka-2025/scene-03.jpg",
-        "caption": "교토 철도박물관의 기차들",
+        "src": "assets/selected/osaka-2025/curated-08.jpg",
+        "caption": "알록달록한 테마 공간",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-09.jpg",
+        "caption": "테마 공간에서 함께",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-10.jpg",
+        "caption": "모자를 쓰고 남긴 추억",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-11.jpg",
+        "caption": "놀이기구 앞에서",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-12.jpg",
+        "caption": "파크의 화려한 거리",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-13.jpg",
+        "caption": "캐릭터와 남긴 장면",
+        "date": "2025-06-02"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-14.jpg",
+        "caption": "여행 중 맛있는 한 끼",
+        "date": "2025-06-03"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-15.jpg",
+        "caption": "교토 철도박물관 앞에서",
         "date": "2025-06-05"
       },
       {
-        "src": "assets/selected/osaka-2025/scene-04.jpg",
-        "caption": "우메코지 주변을 걸으며",
+        "src": "assets/selected/osaka-2025/curated-16.jpg",
+        "caption": "빨간 기차와 함께",
+        "date": "2025-06-05"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-17.jpg",
+        "caption": "기차 모형을 살펴보며",
+        "date": "2025-06-05"
+      },
+      {
+        "src": "assets/selected/osaka-2025/curated-18.jpg",
+        "caption": "박물관에서 보낸 시간",
         "date": "2025-06-05"
       }
+    ],
+    "googlePlaces": [
+      [
+        "간사이 국제공항",
+        34.435,
+        135.244
+      ],
+      [
+        "유니버설 스튜디오 재팬",
+        34.667,
+        135.434
+      ],
+      [
+        "교토 철도박물관",
+        34.987,
+        135.743
+      ]
     ]
   },
   {
@@ -368,8 +507,8 @@
     "period": "기존 여행기 · 2026. 9. 29. — 10. 8.",
     "intro": "시드니의 항구와 동물원, 대학 캠퍼스와 공연, 골드코스트의 바다와 브리즈번으로 이어진 열흘. 기존 여행기에서 확인한 여정에 이번 원본 폴더의 사진 기록을 나란히 연결했습니다.",
     "scope": "이번 폴더는 사진 97장·동영상 12개로, 기존 호주 여행기 전체 자료의 일부입니다. 사진 기록은 9/29·9/30·10/1·10/7에 집중됩니다. 다른 날짜는 기존 여행기의 편집 근거를 출처로 명시했습니다.",
-    "hero": "assets/sydney-harbour.jpg",
-    "heroAlt": "시드니 항구와 오페라하우스",
+    "hero": "assets/selected/australia-2026/curated-02.jpg",
+    "heroAlt": "시드니 오페라하우스와 항구",
     "summary": [
       "이번 원본에서 인천공항 출국, 시드니 도착 이동과 식사 장면, 오페라하우스 주변 산책이 확인됩니다.",
       "10월 7일 새벽 사진 한 장은 서퍼스 파라다이스의 바다를 가리킵니다.",
@@ -612,7 +751,69 @@
       "videos": 12,
       "gpsPhotos": 91,
       "unknownVideos": 8
-    }
+    },
+    "representatives": [
+      {
+        "src": "assets/selected/australia-2026/curated-01.jpg",
+        "caption": "시드니 항구와 하버브리지",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-02.jpg",
+        "caption": "오페라하우스를 향해",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-03.jpg",
+        "caption": "오페라하우스 앞 가족 사진",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-04.jpg",
+        "caption": "항구를 바라보는 순간",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-05.jpg",
+        "caption": "시드니에서 함께",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-06.jpg",
+        "caption": "오페라하우스 앞에서",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-07.jpg",
+        "caption": "푸른 하늘 아래 가족의 시간",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-08.jpg",
+        "caption": "오페라하우스 지붕 아래",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-09.jpg",
+        "caption": "바다 너머 하버브리지",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-10.jpg",
+        "caption": "항구 산책길에서",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-11.jpg",
+        "caption": "시드니의 도시 풍경",
+        "date": "2026-10-01"
+      },
+      {
+        "src": "assets/selected/australia-2026/curated-12.jpg",
+        "caption": "바다 위로 떠오른 아침 해",
+        "date": "2026-10-07"
+      }
+    ]
   },
   {
     "id": "jeju-2022",
@@ -622,9 +823,9 @@
     "period": "사진 기록 · 2022. 6. 1. — 6. 5.",
     "intro": "공항과 기내에서 시작해 숙소의 휴식, 9.81파크의 레이싱, 바다를 바라본 식사와 수국 정원, 어린이 체험 전시까지. 다섯 날의 사진으로 제주 여행의 장면들을 이어 봅니다.",
     "scope": "압축파일의 사진 359장을 보관했습니다. 345장에는 촬영일이 남아 있고 14장은 촬영일 미확인입니다. GPS 항목이 있어도 좌표값이 유효하지 않아 지리적 이동 경로는 복원하지 않았습니다.",
-    "hero": "assets/selected/jeju-2022/cover.jpg",
+    "hero": "assets/selected/jeju-2022/curated-01.jpg",
     "heroWord": "제주",
-    "heroAlt": "제주의 수국과 초록 정원",
+    "heroAlt": "수국 정원에서 함께",
     "mapMode": "sequence",
     "summary": [
       "6월 1일 공항·탑승 장면 뒤로 숙소와 가족 휴식 사진이 이어집니다.",
@@ -779,25 +980,90 @@
     },
     "representatives": [
       {
-        "src": "assets/selected/jeju-2022/scene-01.jpg",
-        "caption": "9.81파크의 가족 레이싱",
+        "src": "assets/selected/jeju-2022/curated-01.jpg",
+        "caption": "수국 정원에서 함께",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-02.jpg",
+        "caption": "제주 여행의 시작",
+        "date": "2022-06-01"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-03.jpg",
+        "caption": "함께한 이동 시간",
         "date": "2022-06-02"
       },
       {
-        "src": "assets/selected/jeju-2022/scene-02.jpg",
-        "caption": "바다를 배경으로 남긴 장면",
+        "src": "assets/selected/jeju-2022/curated-04.jpg",
+        "caption": "9.81파크에서",
+        "date": "2022-06-02"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-05.jpg",
+        "caption": "푸른 바다를 바라보며",
         "date": "2022-06-03"
       },
       {
-        "src": "assets/selected/jeju-2022/scene-03.jpg",
-        "caption": "수국 사이에서 함께",
+        "src": "assets/selected/jeju-2022/curated-06.jpg",
+        "caption": "바다 전망대에서",
         "date": "2022-06-03"
       },
       {
-        "src": "assets/selected/jeju-2022/scene-04.jpg",
-        "caption": "제주의 들판과 그네",
+        "src": "assets/selected/jeju-2022/curated-07.jpg",
+        "caption": "초록 정원 산책",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-08.jpg",
+        "caption": "정원에서 남긴 가족 사진",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-09.jpg",
+        "caption": "수국 꽃길의 아이들",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-10.jpg",
+        "caption": "분홍 수국 앞에서",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-11.jpg",
+        "caption": "꽃에 둘러싸인 순간",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-12.jpg",
+        "caption": "나무 그늘 아래 산책",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-13.jpg",
+        "caption": "정원의 작은 쉼터",
+        "date": "2022-06-03"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-14.jpg",
+        "caption": "넓은 들판의 그네",
+        "date": "2022-06-04"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-15.jpg",
+        "caption": "야자수 길을 걷다",
+        "date": "2022-06-04"
+      },
+      {
+        "src": "assets/selected/jeju-2022/curated-16.jpg",
+        "caption": "체험 공간에서",
         "date": "2022-06-04"
       }
+    ],
+    "googlePlaces": [
+      [
+        "9.81파크 제주"
+      ]
     ]
   },
   {
@@ -808,9 +1074,9 @@
     "period": "사진 기록 · 2023. 10. 27. — 10. 31.",
     "intro": "나리타공항에서 시작해 마이하마 리조트의 숙소와 상점가, 모노레일을 타고 디즈니씨와 디즈니랜드로. 가을 장식과 캐릭터, 두 아이와 함께 남긴 닷새의 장면을 사진 순서로 이어 봅니다.",
     "scope": "중복을 제외한 사진 254장·동영상 36개를 정리했습니다. 사진 254장 모두 촬영일과 유효 GPS가 남아 있습니다. 기록 범위는 10월 27~31일이며 귀국 항공편·도착 시각은 확인되지 않았습니다.",
-    "hero": "assets/selected/tokyo-2023/scene-01.jpg",
+    "hero": "assets/selected/tokyo-2023/curated-01.jpg",
     "heroWord": "디즈니",
-    "heroAlt": "도쿄 디즈니씨의 항구 풍경",
+    "heroAlt": "도쿄 디즈니랜드의 푸른 하늘",
     "summary": [
       "10월 27일 나리타공항과 버스 이동 뒤로 도쿄만 베이사이드 숙소권의 사진이 이어집니다.",
       "10월 28일에는 리조트라인·디즈니랜드 호텔 주변·익스피어리 상점가, 29일에는 디즈니씨 방문 장면이 확인됩니다.",
@@ -989,23 +1255,83 @@
     },
     "representatives": [
       {
-        "src": "assets/selected/tokyo-2023/scene-01.jpg",
-        "caption": "디즈니씨 항구의 풍경",
+        "src": "assets/selected/tokyo-2023/curated-01.jpg",
+        "caption": "도쿄 디즈니랜드의 푸른 하늘",
+        "date": "2023-10-30"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-02.jpg",
+        "caption": "리조트라인에서 함께",
+        "date": "2023-10-28"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-03.jpg",
+        "caption": "리조트 상점가를 걷다",
+        "date": "2023-10-28"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-04.jpg",
+        "caption": "디즈니리조트에서 남긴 추억",
+        "date": "2023-10-28"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-05.jpg",
+        "caption": "핼러윈 장식 앞에서",
+        "date": "2023-10-28"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-06.jpg",
+        "caption": "모노레일 안에서",
+        "date": "2023-10-28"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-07.jpg",
+        "caption": "디즈니씨 지구본 앞에서",
         "date": "2023-10-29"
       },
       {
-        "src": "assets/selected/tokyo-2023/scene-02.jpg",
+        "src": "assets/selected/tokyo-2023/curated-08.jpg",
+        "caption": "디즈니씨의 항구 풍경",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-09.jpg",
+        "caption": "항구에서 함께한 가족",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-10.jpg",
+        "caption": "테마 공간의 오후",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-11.jpg",
         "caption": "디즈니씨에서 함께",
         "date": "2023-10-29"
       },
       {
-        "src": "assets/selected/tokyo-2023/scene-03.jpg",
-        "caption": "신데렐라 성 앞에서",
+        "src": "assets/selected/tokyo-2023/curated-12.jpg",
+        "caption": "나무 사이 파크 풍경",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-13.jpg",
+        "caption": "디즈니씨의 저녁",
+        "date": "2023-10-29"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-14.jpg",
+        "caption": "디즈니랜드의 화려한 장식",
         "date": "2023-10-30"
       },
       {
-        "src": "assets/selected/tokyo-2023/scene-04.jpg",
-        "caption": "불이 켜진 파크 입구",
+        "src": "assets/selected/tokyo-2023/curated-15.jpg",
+        "caption": "캐릭터를 만난 순간",
+        "date": "2023-10-30"
+      },
+      {
+        "src": "assets/selected/tokyo-2023/curated-16.jpg",
+        "caption": "디즈니랜드의 하늘과 거리",
         "date": "2023-10-30"
       }
     ]
@@ -1018,9 +1344,9 @@
     "period": "사진 기록 · 2021. 6. 24. — 6. 27.",
     "intro": "공항에서 시작해 리조트의 정원과 수영장, 바닷가 산책길과 스누피가든으로. 두 아이가 함께 놀고 걸었던 초여름 제주 여행을 남아 있는 사진의 순서로 정리했습니다.",
     "scope": "사진 439장 중 433장에 2021년 6월 24~27일 원촬영일이 남아 있습니다. 6장은 촬영일 미확인으로 분리했습니다. 유효 GPS가 없어 실제 위치 이동 경로를 추정하지 않았습니다.",
-    "hero": "assets/selected/jeju-2021/cover.jpg",
+    "hero": "assets/selected/jeju-2021/curated-01.jpg",
     "heroWord": "제주",
-    "heroAlt": "제주 해안 산책길과 정원 풍경",
+    "heroAlt": "스누피가든에서 함께",
     "mapMode": "sequence",
     "map": [],
     "summary": [
@@ -1160,25 +1486,90 @@
     },
     "representatives": [
       {
-        "src": "assets/selected/jeju-2021/scene-01.jpg",
-        "caption": "공항에서 비행기를 바라보며",
+        "src": "assets/selected/jeju-2021/curated-01.jpg",
+        "caption": "스누피가든에서 함께",
+        "date": "2021-06-26"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-02.jpg",
+        "caption": "제주로 떠나는 날",
         "date": "2021-06-24"
       },
       {
-        "src": "assets/selected/jeju-2021/scene-02.jpg",
-        "caption": "수국이 핀 정원에서 함께",
+        "src": "assets/selected/jeju-2021/curated-03.jpg",
+        "caption": "숙소에 도착해서",
+        "date": "2021-06-24"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-04.jpg",
+        "caption": "실내 놀이 공간에서",
+        "date": "2021-06-24"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-05.jpg",
+        "caption": "초여름 정원에서",
         "date": "2021-06-25"
       },
       {
-        "src": "assets/selected/jeju-2021/scene-03.jpg",
-        "caption": "스누피가든의 노란 버스 앞에서",
+        "src": "assets/selected/jeju-2021/curated-06.jpg",
+        "caption": "수국 곁 벤치에서",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-07.jpg",
+        "caption": "꽃길의 작은 순간",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-08.jpg",
+        "caption": "함께 쉬어 가는 정원",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-09.jpg",
+        "caption": "바다를 바라보는 정원",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-10.jpg",
+        "caption": "제주 해안 산책",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-11.jpg",
+        "caption": "야자수와 초록 정원",
+        "date": "2021-06-25"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-12.jpg",
+        "caption": "스누피와 친구들",
         "date": "2021-06-26"
       },
       {
-        "src": "assets/selected/jeju-2021/scene-04.jpg",
-        "caption": "초록 연못을 함께 바라보며",
+        "src": "assets/selected/jeju-2021/curated-13.jpg",
+        "caption": "노란 스쿨버스 앞에서",
+        "date": "2021-06-26"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-14.jpg",
+        "caption": "초록 나무 아래 벤치",
+        "date": "2021-06-26"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-15.jpg",
+        "caption": "정원의 연못을 바라보며",
+        "date": "2021-06-26"
+      },
+      {
+        "src": "assets/selected/jeju-2021/curated-16.jpg",
+        "caption": "스누피와 함께 남긴 사진",
         "date": "2021-06-26"
       }
+    ],
+    "googlePlaces": [
+      [
+        "스누피가든 제주"
+      ]
     ]
   }
 ]
