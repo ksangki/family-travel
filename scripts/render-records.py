@@ -56,7 +56,16 @@ h=base.replace('두 편의 여행 기록','세 편의 여행 기록').replace('2
 h=h.replace('href="https://ksangki.github.io/australia-family-2026/"','href="australia-2026.html"')
 h=h.replace('2025 · 일본 오사카','2025. 6. 1. — 6. 6. · 일본 사진 기록').replace('창밖으로 펼쳐진 공원의 풍경, 붉게 물든 저녁 하늘, 불빛이 켜진 입구까지. 사진으로 남긴 오사카의 하루를 펼쳐봅니다.','유니버설시티와 USJ를 거쳐 교토 철도박물관까지. 촬영 날짜와 위치를 따라 오사카·교토의 여정을 다시 펼칩니다.').replace('오사카 여행 기록 보기','오사카·교토 여행 기록 보기')
 card='''<article class="trip osaka-card"><a class="trip-image hong-kong-card" href="hong-kong-2024.html" aria-label="2024 홍콩 가족여행 기록 보기"><span class="badge">홍콩 · 2024</span><strong>정원을 걷고,<br>디즈니 성 앞까지.</strong><span class="hk-card-year">2024</span></a><div class="trip-copy"><p class="eyebrow">사진 기록 · 2024. 5. 26. — 5. 27.</p><h3>2024 홍콩 가족여행</h3><p class="cities">디즈니 리조트 · 디즈니랜드</p><p>리조트 정원과 해안 산책에서 다음 날 아침 디즈니랜드 입구까지. 사진에 남은 이틀의 동선을 이어 봅니다.</p><div class="tags"><span>정원 산책</span><span>테마파크</span><span>가족 여행</span></div><a class="text-link" href="hong-kong-2024.html">홍콩 여행 기록 보기 <span>↗</span></a></div></article>'''
-if 'hong-kong-card' not in h:h=h.replace('<p class="next">',card+'<p class="next">',1)
+hong_kong_seen=False
+def unique_hong_kong_card(match):
+ global hong_kong_seen
+ block=match.group(0)
+ if 'href="hong-kong-2024.html"' not in block:return block
+ if hong_kong_seen:return ''
+ hong_kong_seen=True
+ return block
+h=re.sub(r'<article class="trip[^\"]*">.*?</article>',unique_hong_kong_card,h,flags=re.S)
+if not hong_kong_seen:h=h.replace('<p class="next">',card+'<p class="next">',1)
 h=h.replace('노을에서 야경까지, 오사카의 장면들','오사카에서 교토까지, 사진으로 잇는 코스').replace('공원의 전경과 저녁 풍경을 공개 대표 사진 세 장으로 모았습니다.','USJ와 교토 철도박물관, 사진 메타데이터로 정리한 날짜별 여행기입니다.')
 h=h.replace('href="https://ksangki.github.io/australia-family-2026/#record"','href="australia-2026.html#days"').replace('href="https://ksangki.github.io/australia-family-2026/#journey"','href="australia-2026.html#route"')
 def selected_home_card(match):
