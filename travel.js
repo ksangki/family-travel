@@ -30,3 +30,9 @@ mapButtons.forEach(button => button.addEventListener('click', () => {
   if (googleMap && button.dataset.mapSrc) googleMap.src = button.dataset.mapSrc;
   document.querySelector('#map-selection').textContent = `${button.textContent} · ${document.querySelector('#google-route-map') ? 'Google 지도' : '기록에서 선택한 장면'}`;
 }));
+// Reveal all dates before the browser follows an overview link to a daily record.
+document.querySelectorAll('[data-overview-day]').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('[data-day-filter="all"]')?.click();
+  });
+});

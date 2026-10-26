@@ -5,11 +5,24 @@ p=Path(__file__).resolve().parent.parent;trips=json.loads((p/'travel-records.jso
 base=(p/'index.html').read_text();header=base[base.index('<header>'):base.index('<main')].replace('href="#','href="index.html#')
 def private_link(t,path='journey.md'):
  return 'https://github.com/login?return_to='+quote('/ksangki/family-travel-private/blob/main/albums/'+t['folder']+'/'+path,safe='')
+def route_overview(t):
+ groups=t.get('overviewGroups') or [{'title':'전체 여정','period':t['period'],'nodes':[{'date':d['date'],'label':d['title'],'detail':' → '.join(d['route'])} for d in t['days']]}]
+ sections=[];number=0
+ for index,group in enumerate(groups):
+  if group.get('transfer'):
+   sections.append(f'<div class="overview-transfer"><span aria-hidden="true">↓</span><strong>{E(group["transfer"])}</strong></div>')
+  nodes=[]
+  for node in group['nodes']:
+   number+=1;date=node['date'];short=date[5:].replace('-','/')
+   nodes.append(f'<li><a href="#day-{date}" data-overview-day="{date}"><span class="overview-step" aria-hidden="true">{number}</span><time datetime="{date}">{short}</time><strong>{E(node["label"])}</strong><small>{E(node["detail"])}</small></a></li>')
+  sections.append(f'<section class="overview-region overview-region-{index%2}"><div class="overview-region-heading"><h4>{E(group["title"])}</h4><span>{E(group["period"])}</span></div><ol class="overview-stops" style="--stop-count:{min(5,len(nodes))}">{"".join(nodes)}</ol></section>')
+ return f'<div class="journey-overview" aria-labelledby="journey-overview-title"><div class="overview-heading"><div><p class="eyebrow">여행의 흐름을 한눈에</p><h3 id="journey-overview-title">전체 동선 요약</h3></div><span>{len(t["days"])}개 날짜의 기록</span></div>{"".join(sections)}<p class="overview-note">사진 기록을 바탕으로 정리한 방문 순서입니다. 실제 도로 경로·거리·소요시간을 뜻하지 않습니다. 장소를 누르면 해당 날짜의 이야기로 이동합니다.</p></div>'
+
 def route_map(t):
  # Only public landmarks: no private GPS, inferred hotels, or fabricated routes.
  points=t.get('googlePlaces') or [[label,lat,lon] for label,lat,lon in t['map']]
  if not points:
-  return '<p class="note">확인된 장소가 없어 지도에 표시하지 않았습니다.</p>'
+  return route_overview(t)+'<p class="note">확인된 장소가 없어 지도에 표시하지 않았습니다.</p>'
  def query(point):
   return str(point[1])+','+str(point[2]) if len(point)>2 else point[0]
  def embed(point):
@@ -22,7 +35,7 @@ def route_map(t):
   url='https://www.google.com/maps/dir/?api=1&origin='+quote(query(points[0]),safe='')+'&destination='+quote(query(points[-1]),safe='')
   if len(points)>2:url+='&waypoints='+quote('|'.join(query(point) for point in points[1:-1]),safe='')
   route=f'<a class="button outline" href="{E(url)}" target="_blank" rel="noopener noreferrer">Google 지도에서 전체 동선 열기 ↗</a>'
- return f'<div class="route-map google-route-map"><iframe id="google-route-map" title="{E(t["title"])} Google 지도" src="{E(embed(points[0]))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-buttons" aria-label="Google 지도에서 장소 선택">{buttons}</div><p id="map-selection" aria-live="polite">1. {E(points[0][0])} · Google 지도</p><div class="google-place-links">{links}</div><div class="map-actions">{route}<p class="note">지도가 보이지 않으면 위 장소 링크로 Google 지도를 열어 주세요.</p></div></div>'
+ return route_overview(t)+f'<div class="overview-map-action">{route}</div><details class="google-map-details"><summary>Google 지도에서 장소별로 살펴보기</summary><div class="route-map google-route-map"><iframe id="google-route-map" title="{E(t["title"])} Google 지도" src="{E(embed(points[0]))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-buttons" aria-label="Google 지도에서 장소 선택">{buttons}</div><p id="map-selection" aria-live="polite">1. {E(points[0][0])} · Google 지도</p><div class="google-place-links">{links}</div><div class="map-actions"><p class="note">지도가 보이지 않으면 위 장소 링크로 Google 지도를 열어 주세요.</p></div></div></details>'
 
 for t in trips:
  hero=(f'<img src="{t["hero"]}" alt="{E(t["heroAlt"])}" fetchpriority="high"><div class="shade"></div>' if t['hero'] else f'<div class="hong-kong-background" aria-hidden="true"><span>{E(t.get('heroWord','홍콩'))}</span><i>가족과 함께 남긴 장면</i></div>')
@@ -49,9 +62,10 @@ for t in trips:
  original=f'<a class="button outline" href="https://ksangki.github.io/australia-family-2026/">기존 호주 여행기 전체 보기 ↗</a>' if t['id']=='australia-2026' else ''
  doc=f'''<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{E(t['intro'])}"><meta name="theme-color" content="#234c43"><title>{E(t['title'])} | 우리 가족 여행 기록</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="travel.css"><script src="app.js" defer></script><script src="travel.js?v=journey-photos-2" defer></script></head><body><a class="skip" href="#main">본문으로 바로가기</a>{header}<main id="main"><section class="hero record-hero">{hero}<div class="hero-copy"><p class="eyebrow">사진으로 다시 잇는 우리 여행</p><h1>{E(t['title'])}</h1><p>{E(t['subtitle'])}</p><span class="period">{E(t['period'])}</span></div></section><nav class="record-nav" aria-label="여행기 목차"><a href="#overview">여행 한눈에</a><a href="#route">우리의 동선</a><a href="#days">날짜별 이야기</a><a href="#places">방문 장소</a><a href="#album">사진첩</a></nav><section id="overview" class="wrap section record-overview"><div><p class="eyebrow">기억을 이어 주는 사진들</p><h2>{E(t['subtitle'])}</h2><p class="lead">{E(t['intro'])}</p><ul class="summary-list">{summary}</ul>{original}</div><aside class="record-facts"><p class="eyebrow">이번 원본 폴더</p><div class="stats-row"><strong>{stats['photos']}<small>사진</small></strong><strong>{stats['videos']}<small>동영상</small></strong><strong>{stats['gpsPhotos']}<small>위치가 남은 사진</small></strong></div><p>{E(t['scope'])}</p><a class="text-link" href="{private_link(t)}">가족 전용 상세 여행기 ↗</a></aside></section><section id="route" class="story-section"><div class="wrap section"><div class="section-title"><div><p class="eyebrow">장소와 시간을 연결하다</p><h2>우리의 동선</h2></div></div><ol class="route-ribbon">{''.join('<li>'+E(s)+'</li>' for s in t['route'])}</ol>{route_map(t)}<p class="note">버튼을 누르면 Google 지도에서 해당 장소를 볼 수 있습니다. 전체 동선 링크는 공개 장소를 잇는 Google 추천 경로이며 실제 이동 기록과 다를 수 있습니다.</p></div></section><section id="days" class="wrap section"><div class="section-title"><div><p class="eyebrow">날짜별로 펼쳐 보는 기억</p><h2>날짜별 여행 이야기</h2></div></div><div class="day-filters" aria-label="여행 날짜 선택">{day_buttons}</div><p id="day-filter-status" class="note" aria-live="polite">전체 {len(t['days'])}개 날짜를 보고 있습니다.</p><div class="days-list">{days}</div></section><section id="places" class="story-section"><div class="wrap section"><div class="section-title"><div><p class="eyebrow">우리가 머문 장소들</p><h2>방문 장소 모아보기</h2></div><label class="category-control">활동 분류 <select id="category-filter">{options}</select></label></div><p id="place-filter-status" class="note" aria-live="polite">전체 {len(t['spots'])}곳</p><div class="places-grid">{spots}</div></div></section><section id="album" class="wrap section"><div class="section-title"><div><p class="eyebrow">풍경은 공개로, 가족의 순간은 우리끼리</p><h2>여행 사진첩</h2></div></div><div class="record-photos">{photo_section}</div><div class="private-album-banner"><div><h3>가족 사진과 상세 분류는 비공개 앨범에</h3><p>날짜·장소·활동별 사진, 원본과 동영상을 함께 볼 수 있습니다.</p></div><a class="button light" href="{private_link(t)}">GitHub 로그인 후 보기 ↗</a></div></section><section class="wrap section evidence-section"><h2>기록의 근거와 남은 빈칸</h2><p>{E(t['extra'])}</p><p>촬영된 장면과 촬영 시각·위치가 함께 맞는 구간을 우선 정리했습니다. 날짜만 있는 사진이나 기존 여행기로 보완한 부분은 별도로 표시했습니다. 사진 없는 시간을 채워 전체 이동을 추정하지 않습니다.</p><details><summary>시간·위치 정보를 해석한 방법</summary><p>사진은 원촬영 시각과 시간대, 동영상은 원촬영 날짜 정보를 우선했습니다. 공유·내보내기 날짜는 여행 날짜로 사용하지 않았습니다. 기내 GPS는 출발지에 남을 수 있습니다. 가까운 장소는 사진 속 간판·풍경과 함께 확인했고, 교통수단·탑승 완료·정확한 숙소명은 증거가 있을 때만 기록합니다.</p><p>사진의 개수는 현재 백업 폴더 기준입니다. 사진 기록일은 전체 여행 기간과 같지 않을 수 있습니다.</p></details><h3>장소·기록 참고자료</h3><p class="note">공식 안내는 장소 이름과 위치 맥락 확인용이며 가족의 실제 방문은 사진·메타데이터 또는 명시한 기존 여행기 근거로 판단했습니다.</p><ul>{sources}</ul></section><div class="wrap"><a class="button outline" href="index.html#places">← 우리 가족 여행 목록</a></div></main><footer class="wrap"><div><a class="brand" href="index.html">우리 가족 여행 기록</a><p>함께한 시간을, 오래도록.</p></div><p>가족 사진 원본과 정확한 위치는 비공개로 보관합니다.</p></footer><dialog id="viewer" aria-labelledby="caption"><button id="close-photo" class="close">닫기 ×</button><img src="assets/sydney-harbour.jpg" alt="여행 풍경 확대 사진"><p id="caption">공개 대표 풍경 사진</p></dialog></body></html>'''
  if t.get('representatives'):
-  doc=doc.replace('href="travel.css"','href="travel.css?v=home-covers-3"').replace('hero record-hero','hero record-hero selected-photo-hero').replace('class="record-photos"','class="record-photos selected-photos"').replace('풍경은 공개로, 가족의 순간은 우리끼리','선별한 대표 장면만 함께 나눕니다').replace('가족 사진과 상세 분류는 비공개 앨범에','나머지 사진과 원본은 가족 앨범에').replace('날짜·장소·활동별 사진, 원본과 동영상을 함께 볼 수 있습니다.','선별한 대표 사진만 공개하고, 나머지 사진·원본·동영상은 로그인한 가족만 볼 수 있습니다.')
+  doc=doc.replace('href="travel.css"','href="travel.css?v=route-overview-4"').replace('hero record-hero','hero record-hero selected-photo-hero').replace('class="record-photos"','class="record-photos selected-photos"').replace('풍경은 공개로, 가족의 순간은 우리끼리','선별한 대표 장면만 함께 나눕니다').replace('가족 사진과 상세 분류는 비공개 앨범에','나머지 사진과 원본은 가족 앨범에').replace('날짜·장소·활동별 사진, 원본과 동영상을 함께 볼 수 있습니다.','선별한 대표 사진만 공개하고, 나머지 사진·원본·동영상은 로그인한 가족만 볼 수 있습니다.')
  if t.get('mapMode')=='sequence':doc=doc.replace('버튼을 누르면 Google 지도에서 해당 장소를 볼 수 있습니다. 전체 동선 링크는 공개 장소를 잇는 Google 추천 경로이며 실제 이동 기록과 다를 수 있습니다.','사진에 유효 GPS가 없어 확인된 공개 장소만 Google 지도에 표시했습니다. 숙소나 이름이 확인되지 않은 장소의 위치는 추정하지 않았습니다.')
  if t['id']=='osaka-2025':doc=doc.replace('<section id="album" class="wrap section">','<section id="album" class="wrap section"><span id="osaka-photos"></span>')
+ doc=re.sub(r'<ol class="route-ribbon">.*?</ol>','',doc,count=1,flags=re.S)
  (p/(t['id']+'.html')).write_text(doc)
 # Update home cards and connect the original Australia guide through the new summary.
 h=base.replace('두 편의 여행 기록','세 편의 여행 기록').replace('2025 오사카 가족여행','2025 오사카·교토 가족여행')
@@ -106,5 +120,5 @@ h=h.replace('<body>','<body class="home-page">')
 h=h.replace('대표 풍경 사진:','시드니 항구 사진:')
 if '그 외 대표 사진: 우리 가족' not in h:h=h.replace('<p>© 2026 우리 가족 여행 기록</p>','<p>그 외 대표 사진: 우리 가족</p><p>© 2026 우리 가족 여행 기록</p>')
 h=re.sub(r'<link rel="stylesheet" href="travel\.css(?:\?[^"]*)?">','',h)
-h=h.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="travel.css?v=home-covers-3">');(p/'index.html').write_text(h)
+h=h.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="travel.css?v=route-overview-4">');(p/'index.html').write_text(h)
 print('Rendered',len(trips),'complete public travel records and home links')
